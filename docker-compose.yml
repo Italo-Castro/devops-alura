@@ -1,0 +1,14 @@
+services:
+  # Servico da aplicacao PY
+  app:
+    build: . # Controi a imagem a partir do dockerfile na raiz do projeto
+    container_name: minha-fastapi-app-alura
+    ports:
+      - 8000:8000
+
+    volumes:
+      - .:/app
+    
+    environment:
+      - PYTHONBUFFERED=1
+      ## Aqui vem variaveis de ambiente..
